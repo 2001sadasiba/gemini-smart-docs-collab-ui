@@ -1,0 +1,56 @@
+.document-grid-container {
+    width: 100%;
+}
+
+.grid-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.grid-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.document-count {
+    background: #f3f4f6;
+    color: #6b7280;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.document-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .document-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .grid-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .document-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -73,8 +73,37 @@
 /* Nav Links */
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
+}
+
+.user-welcome {
+    min-height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-welcome {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.user-welcome:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 .login-btn {
@@ -114,6 +143,28 @@
     box-shadow: 0 8px 25px rgba(252, 129, 129, 0.3);
 }
 
+.header-loader {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #ffffff;
+    animation: spin 0.8s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header-container {
@@ -122,6 +173,12 @@
 
     .hamburger {
         display: flex;
+    }
+
+    .user-welcome {
+        max-width: 150px;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .nav-links {
@@ -170,6 +227,12 @@
 @media (max-width: 480px) {
     .logo {
         font-size: 1.3rem;
+    }
+
+    .user-welcome {
+        max-width: 120px;
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
     }
 
     .nav-links {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/LoginPage.css';
-import Loader from '../components/Loader';
+import { Loader } from '../components';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../store/slices/authSlice';
@@ -51,12 +51,13 @@ const LoginPage = () => {
             <div className="login-container">
                 <div className="login-card">
                     {/* Header with Logo */}
+
                     <div className="login-header">
                         <div className="logo-container">
-                            <div className="logo-icon">🎬</div>
-                            <h1 className="logo-text">CineVerse</h1>
+                            <div className="logo-icon">📚</div>
+                            <h1 className="logo-text">SmartDocs</h1>
                         </div>
-                        <p className="login-subtitle">Enter your cinematic universe</p>
+                        <p className="login-subtitle">Collaborate. Create. Discover.</p>
                     </div>
 
                     {/* Error Message */}

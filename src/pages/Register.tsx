@@ -71,12 +71,12 @@ const RegisterPage = () => {
                 <div className="register-card">
                     {/* Header with Logo */}
                     <div className="register-header">
-                        <div className="logo-container">
-                            <div className="logo-icon">🚀</div>
-                            <h1 className="logo-text">Join CineVerse</h1>
-                        </div>
-                        <p className="register-subtitle">Begin your cinematic journey</p>
-                    </div>
+    <div className="logo-container">
+        <div className="logo-icon">🤝</div>
+        <h1 className="logo-text">Create Account</h1>
+    </div>
+    <p className="register-subtitle">Begin your knowledge management journey</p>
+</div>
 
                     {/* Error Message */}
                     {error && (

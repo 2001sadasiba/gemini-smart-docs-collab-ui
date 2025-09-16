@@ -7,48 +7,41 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-section">
                         <div className="footer-logo">
-                            🎬 CineVerse
+                            🧠 AI Knowledge Hub
                         </div>
                         <p className="footer-description">
-                            Your ultimate destination for movie reviews and recommendations.
-                            Discover, rate, and share your cinematic experiences.
+                            Collaborative platform for teams to create, manage, and search
+                            knowledge documents with AI-powered features.
                         </p>
                     </div>
 
                     <div className="footer-section">
                         <h4>Quick Links</h4>
                         <ul className="footer-links">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/movies">Movies</a></li>
-                            <li><a href="/reviews">Reviews</a></li>
-                            <li><a href="/about">About</a></li>
+                            <li><a href="/dashboard">Dashboard</a></li>
+                            <li><a href="/documents">My Documents</a></li>
+                            <li><a href="/search">Search</a></li>
+                            <li><a href="/ask">Team Q&A</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Connect</h4>
-                        <div className="social-links">
-                            <a href="#" className="social-link" aria-label="Twitter">
-                                <span className="social-icon">🐦</span>
-                            </a>
-                            <a href="#" className="social-link" aria-label="Facebook">
-                                <span className="social-icon">📘</span>
-                            </a>
-                            <a href="#" className="social-link" aria-label="Instagram">
-                                <span className="social-icon">📸</span>
-                            </a>
-                            <a href="#" className="social-link" aria-label="GitHub">
-                                <span className="social-icon">💻</span>
-                            </a>
-                        </div>
+                        <h4>Features</h4>
+                        <ul className="footer-links">
+                            <li>AI Summarization</li>
+                            <li>Smart Tagging</li>
+                            <li>Semantic Search</li>
+                            <li>Version History</li>
+                        </ul>
                     </div>
 
                     <div className="footer-section">
-                        <h4>Legal</h4>
+                        <h4>Support</h4>
                         <ul className="footer-links">
-                            <li><a href="/privacy">Privacy Policy</a></li>
-                            <li><a href="/terms">Terms of Service</a></li>
-                            <li><a href="/cookies">Cookie Policy</a></li>
+                            <li><a href="/help">Help Center</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/feedback">Feedback</a></li>
+                            <li><a href="/docs">API Documentation</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,7 +49,7 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <div className="footer-divider"></div>
                     <p className="copyright">
-                        © 2025 CineVerse. Made with ❤️ for movie lovers. All rights reserved.
+                        © 2025 AI Knowledge Hub. Built with ❤️ using MERN Stack & Gemini AI.
                     </p>
                 </div>
             </div>
