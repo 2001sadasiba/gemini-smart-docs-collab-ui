@@ -1,4 +1,5 @@
-import { Footer, Header, MovieList } from '../components';
+import { Footer, Header } from '../components';
+import { Dashboard } from '../components/dashboard';
 
 const HomePage = () => {
     return (
@@ -7,7 +8,7 @@ const HomePage = () => {
 
             <main className="main">
                 <div className="container">
-                    <MovieList />
+                    <Dashboard />
                 </div>
             </main>
 
