@@ -1,8 +1,8 @@
-// src/router/PageRouter.tsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LoginPage, RegisterPage, HomePage } from '../pages';
 import ProtectedRoute from '../components/ProtectedRoute';
-import {MovieDetailsPage} from '../pages';
+import { DocumentEditor } from '../components/dashboard';
+import { Dashboard } from '../components/dashboard';
 
 const PageRouter = () => {
     return (
@@ -10,7 +10,30 @@ const PageRouter = () => {
             <Routes>
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
-                <Route path="/movie/:imdbID" element={<MovieDetailsPage />} />
+                <Route
+                    path="/document/view/:docId"
+                    element={
+                        <ProtectedRoute>
+                            <DocumentEditor />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/document/:docId?"
+                    element={
+                        <ProtectedRoute>
+                            <DocumentEditor />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/dashboard"
+                    element={
+                        <ProtectedRoute>
+                            <Dashboard />
+                        </ProtectedRoute>
+                    }
+                />
                 <Route
                     path="/"
                     element={
@@ -23,6 +46,5 @@ const PageRouter = () => {
         </BrowserRouter>
     );
 };
-
 
 export default PageRouter;

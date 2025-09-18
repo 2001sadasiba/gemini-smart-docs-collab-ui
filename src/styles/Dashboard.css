@@ -1,7 +1,5 @@
-/* Dashboard.css - Fixed Layout */
 .dashboard-container {
   min-height: calc(100vh - 70px - 200px);
-  /* Viewport height minus header and footer heights */
   padding: 20px 0;
   /* background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); */
   display: flex;
@@ -9,7 +7,7 @@
 }
 
 .dashboard {
-  max-width: 1200px;
+  /* max-width: 95%; */
   width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
@@ -416,6 +414,30 @@
   gap: 12px;
 }
 
+.auth-error {
+  text-align: center;
+  padding: 60px 20px;
+  color: #e0e0e0;
+}
+
+.auth-error h2 {
+  margin-bottom: 16px;
+  color: #ff6b6b;
+}
+
+.error-message {
+  padding: 16px;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 8px;
+  color: #ff6b6b;
+  margin-bottom: 16px;
+}
+
+.error-message p {
+  margin: 0;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
@@ -433,6 +455,104 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(120, 120, 120, 0.7);
+}
+
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(100, 100, 100, 0.3);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.limit-select {
+  padding: 8px 12px;
+  background: rgba(30, 30, 30, 0.8);
+  color: #e0e0e0;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.limit-select:focus {
+  outline: none;
+  border-color: #5d9bff;
+  box-shadow: 0 0 0 2px rgba(93, 155, 255, 0.3);
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.pagination-btn {
+  padding: 8px 12px;
+  background: rgba(35, 35, 35, 0.8);
+  color: #b0b0b0;
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  min-width: 40px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: rgba(45, 45, 45, 0.9);
+  border-color: #5d9bff;
+  color: #e0e0e0;
+  transform: translateY(-1px);
+}
+
+.pagination-btn:disabled {
+  background: rgba(25, 25, 25, 0.5);
+  color: #555;
+  cursor: not-allowed;
+  opacity: 0.5;
+  border-color: rgba(80, 80, 80, 0.3);
+}
+
+.pagination-btn.active {
+  background: linear-gradient(145deg, #5d9bff, #4a7fd4);
+  color: white;
+  border-color: #5d9bff;
+  box-shadow: 0 2px 8px rgba(93, 155, 255, 0.3);
+}
+
+.pagination-btn.active:hover {
+  background: linear-gradient(145deg, #6aa5ff, #558ce6);
+  border-color: #6aa5ff;
+  box-shadow: 0 3px 12px rgba(93, 155, 255, 0.4);
+}
+
+@media (min-width: 1600px) {
+  .dashboard {
+    max-width: 2000px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .dashboard {
+    max-width: 1800px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -467,15 +587,59 @@
   .documents-list {
     grid-template-columns: 1fr;
   }
+
+  .pagination {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .pagination-info {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pagination-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .pagination-btn {
+    min-width: 36px;
+    max-width: 50px;
+    font-size: 13px;
+    padding: 6px 8px;
+  }
 }
 
 @media (max-width: 640px) {
   .dashboard-container {
     min-height: calc(100vh - 70px - 250px);
-    /* Adjust for mobile footer height */
   }
 
   .dashboard {
     padding: 0 0.5rem;
+  }
+
+  .pagination-controls {
+    gap: 1px;
+  }
+
+  .pagination-btn {
+    min-width: 32px;
+    max-width: 42px;
+    padding: 5px 6px;
+    font-size: 12px;
+  }
+
+  .pagination-info {
+    font-size: 13px;
+  }
+
+  .limit-select {
+    padding: 6px 8px;
+    font-size: 13px;
   }
 }

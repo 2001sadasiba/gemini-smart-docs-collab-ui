@@ -56,7 +56,7 @@ const Header = () => {
     return (
         <header className="app-header">
             <div className="header-container">
-                <div className="logo" onClick={() => navigate('/dashboard')}>
+                <div className="logo" onClick={() => navigate('/')}>
                     🧠 AI Knowledge Hub
                 </div>
 

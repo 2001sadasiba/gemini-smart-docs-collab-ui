@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4>Quick Links</h4>
                         <ul className="footer-links">
-                            <li><a href="/dashboard">Dashboard</a></li>
+                            <li><a href="/">Dashboard</a></li>
                             <li><a href="/documents">My Documents</a></li>
                             <li><a href="/search">Search</a></li>
                             <li><a href="/ask">Team Q&A</a></li>
